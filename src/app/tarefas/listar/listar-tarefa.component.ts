@@ -14,15 +14,11 @@ export class ListarTarefaComponent implements OnInit {
   constructor(private tarefaService: TarefaService) {}
 
   ngOnInit() {
-  	this.tarefas = this.listarTodos();
-    this.tarefas = [
-        new Tarefa(1, "Tarefa 1", false),
-        new Tarefa(2, "Tarefa 2", true),
-    ];
+    this.tarefas = this.listarTodos();
   }
 
   listarTodos(): Tarefa[] {
-  	return this.tarefaService.listarTodos();
+    return this.tarefaService.listarTodos();
   }
 
   remover($event: any, tarefa: Tarefa): void {
